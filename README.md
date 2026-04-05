@@ -22,6 +22,8 @@ Built for long articles, documentation, and AI chat interfaces (Claude, ChatGPT,
 
 You're reading a long article or scrolling through an AI conversation. You want to check something further up — but once you scroll away, **you lose your place**.
 
+This is especially painful when **learning interactively with LLMs**. You're reading a long response from Claude or ChatGPT, a question pops into your head, so you start a new message to ask about it. Once you get the answer, you need to scroll all the way back to where you were — wasting time dragging up and down trying to find your spot.
+
 Reading Marker solves this with one keyboard shortcut.
 
 ## How It Works
