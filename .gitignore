@@ -1,0 +1,27 @@
+# OS
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*~
+
+# Node (testing only)
+node_modules/
+package.json
+package-lock.json
+
+# Build artifacts
+dist/
+*.crx
+*.zip
+*.pem
+
+# Test
+test/
+test-results/
+playwright.config.js
+playwright-report/

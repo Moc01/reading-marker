@@ -1,0 +1,76 @@
+/* ── Reading Marker ── */
+
+.rm-marker-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent 0%, #ff6b35 8%, #ff6b35 92%, transparent 100%);
+  z-index: 2147483646;
+  pointer-events: none;
+  animation: rm-pulse 2s ease-in-out infinite;
+  box-shadow: 0 0 8px rgba(255, 107, 53, 0.4);
+}
+
+.rm-marker-line::before {
+  content: "▶ 书签";
+  position: absolute;
+  left: 12px;
+  top: -10px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #ff6b35;
+  background: rgba(255, 107, 53, 0.1);
+  border: 1px solid rgba(255, 107, 53, 0.3);
+  border-radius: 3px;
+  padding: 1px 6px;
+  line-height: 1.4;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  white-space: nowrap;
+}
+
+@keyframes rm-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rm-marker-line { animation: none; }
+}
+
+/* Toast notification */
+.rm-toast {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 2147483647;
+  background: #1a1a2e;
+  color: #eee;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 13px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  border-left: 3px solid #ff6b35;
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.25s, transform 0.25s;
+  pointer-events: none;
+}
+
+.rm-toast.rm-show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.rm-toast kbd {
+  display: inline-block;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 3px;
+  padding: 0 5px;
+  font-size: 12px;
+  font-family: inherit;
+  margin: 0 2px;
+  line-height: 1.6;
+}
