@@ -12,6 +12,8 @@ Built for long articles, documentation, and AI chat interfaces (Claude, ChatGPT,
 [![Manifest V3](https://img.shields.io/badge/Manifest-V3-34A853?style=flat-square&logo=googlechrome&logoColor=white)](#)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=flat-square)](LICENSE)
 
+**English** | **[简体中文](README_CN.md)**
+
 </div>
 
 ---
@@ -54,7 +56,7 @@ Reading Marker solves this with one keyboard shortcut.
 
 1. Download or clone this repo:
    ```bash
-   git clone https://github.com/reading-marker/reading-marker-ext.git
+   git clone https://github.com/Moc01/reading-marker.git
    ```
 2. Open `chrome://extensions/` in Chrome
 3. Enable **Developer mode** (toggle in the top right)
@@ -91,7 +93,7 @@ The extension uses Chrome's [Commands API](https://developer.chrome.com/docs/ext
 ## Project Structure
 
 ```
-reading-marker-ext/
+reading-marker/
 ├── manifest.json     ← Extension config, permissions, shortcut
 ├── background.js     ← Service worker: receives shortcut → forwards to content script
 ├── content.js        ← Core logic: marker placement, scroll detection, jump-back
